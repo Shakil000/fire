@@ -20,7 +20,7 @@ const Navbar = () => {
   // --------------------------------------------------
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient from-black/70 via-black/20 to-transparent text-white">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-t from-black/30 to-transparent">
       
       {/* 1. CLOSED HEADER (Mobile & Desktop) */}
       <div className="max-w-7xl mx-auto px-4">
