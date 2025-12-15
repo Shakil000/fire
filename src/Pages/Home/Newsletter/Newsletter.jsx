@@ -9,7 +9,7 @@ const Newsletter = () => {
     <section className="py-12 md:py-20 bg-gray-100">
       
       {/* Centered Content Container for the two-column grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-20xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Two-Column Layout: Stacks on mobile, splits into 2 equal columns on desktop (lg) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
@@ -51,7 +51,7 @@ const Newsletter = () => {
              in the image, you would need to use a background image for the pattern. */}
           <div className="flex flex-col items-center justify-center h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-lg bg-gray-800 text-white">
             
-            <h3 className="text-2xl md:text-3xl font-semibold uppercase tracking-wider mb-2 border-b-2 border-blue-500 inline-block">
+            <h3 className="text-2xl md:text-3xl font-semibold uppercase tracking-wider border-b-5 border-blue-500 inline-block">
               Newsletter Subscription
             </h3>
 
@@ -63,7 +63,7 @@ const Newsletter = () => {
                 <input
                   type="text"
                   placeholder="*Name"
-                  className="w-full py-3 pl-12 pr-4 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full py-3 pl-12 pr-4 bg-white text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   required
                 />
                 <FaUser className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400" />
@@ -74,7 +74,7 @@ const Newsletter = () => {
                 <input
                   type="email"
                   placeholder="*Email Address"
-                  className="w-full py-3 pl-12 pr-4 text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="w-full py-3 pl-12 pr-4 bg-white text-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                   required
                 />
                 <FaEnvelope className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400" />
