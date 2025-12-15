@@ -20,7 +20,7 @@ const Navbar = () => {
   // --------------------------------------------------
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-t from-black/30 to-transparent">
+    <header className="fixed top-0 left-0 w-full z-50 bg-linear-to-t from-black/30 to-transparent">
       
       {/* 1. CLOSED HEADER (Mobile & Desktop) */}
       <div className="max-w-7xl mx-auto px-4">
@@ -92,11 +92,11 @@ const Navbar = () => {
 
           {/* Menu Links */}
           <nav className="flex flex-col">
-            <MenuLink to="/about">About Us</MenuLink>
-            <MenuLink to="/system">Systems</MenuLink>
-            <MenuLink to="/news">News</MenuLink>
-            <MenuLink to="/support-service">Support & Services</MenuLink>
-            <MenuLink to="/contact">Contact</MenuLink>
+            <Link to="/about">About Us</Link>
+            <Link to="/system">Systems</Link>
+            <Link to="/news">News</Link>
+            <Link to="/support-service">Support & Services</Link>
+            <Link to="/contact">Contact</Link>
           </nav>
         </div>
       )}
