@@ -4,100 +4,121 @@ import logo from "../../../assets/eurofyre-logo-1.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const Navbar = () => {
-  // Set initial state to false (closed) for a normal application
-  const [open, setOpen] = useState(false);
-
-  // --- Utility Component for the Mobile Menu Link Style ---
-  const MenuLink = ({ to, children }) => (
-    <Link
-      onClick={() => setOpen(false)}
-      to={to}
-      className="block w-full py-5 px-4 text-white text-lg font-semibold uppercase tracking-wider border-b border-gray-800 transition-colors duration-200 hover:bg-gray-800"
-    >
-      {children}
-    </Link>
-  );
-  // --------------------------------------------------
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-linear-to-t from-black/30 to-transparent">
-      
-      {/* 1. CLOSED HEADER (Mobile & Desktop) */}
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-t from-black/30 to-transparent">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20 relative">
-          
-          {/* Mobile Menu Button (Left Side on Mobile) */}
+
+          {/* Mobile Hamburger */}
           <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden text-2xl p-2 focus:outline-none z-10"
+            onClick={() => setMenuOpen(true)}
+            className="lg:hidden text-2xl p-2 z-10"
             aria-label="Open menu"
           >
-            {/* Show Hamburger icon when menu is closed */}
             ☰
           </button>
-          
-          {/* Logo (Centered on Mobile, Left on Desktop) */}
-          <div className="flex items-center absolute w-full justify-center lg:relative lg:w-auto lg:justify-start">
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="Eurofyre" className="h-6 w-auto filter lg:filter-none" />
+
+          {/* Logo */}
+          <div className="absolute w-full flex justify-center lg:relative lg:w-auto">
+            <Link to="/">
+              <img src={logo} alt="Eurofyre" className="h-6" />
             </Link>
           </div>
 
-          {/* Search Icon (Right Side on Mobile) */}
-          <button className="lg:hidden text-2xl p-2 focus:outline-none z-10" aria-label="Search">
-            {/* Using a magnifying glass icon */}
-            <FaMagnifyingGlass /> 
+          {/* Mobile Search Icon */}
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="lg:hidden text-2xl p-2 z-10"
+            aria-label="Search"
+          >
+            <FaMagnifyingGlass />
           </button>
 
-          {/* Desktop Navigation (Right Side) */}
-          <nav className="hidden lg:flex items-center space-x-8 text-sm font-semibold uppercase">
-            <Link to="/about" className="hover:text-gray-300">About Us</Link>
-            <Link to="/system" className="hover:text-gray-300">Systems</Link>
-            <Link to="/news" className="hover:text-gray-300">News</Link>
-            <Link to="/support-service" className="hover:text-gray-300">Support & Services</Link>
-            <Link to="/contact" className="hover:text-gray-300">Contact</Link>
-            {/* Added a search icon for desktop as well for completeness */}
-            {/* <button className="text-2xl hover:text-gray-300" aria-label="Search">&#x1F50D;</button> */}
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center space-x-8 uppercase text-sm text-white">
+            <Link to="/about">About Us</Link>
+            <Link to="/system">Systems</Link>
+            <Link to="/news">News</Link>
+            <Link to="/support-service">Support</Link>
+            <Link to="/contact">Contact</Link>
           </nav>
-          
         </div>
       </div>
 
-      {/* 2. OPEN MOBILE MENU (Full-Screen Overlay matching the image) */}
-      {open && (
-        <div className="fixed inset-0 bg-black text-white z-50 overflow-y-auto">
-          
-          {/* Top Bar of the Open Menu (Matches image layout: Close | Logo | Search) */}
+      {/* MOBILE MENU OVERLAY */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-50 bg-black text-white">
+          {/* Top Bar */}
           <div className="flex items-center justify-between h-20 px-4 border-b border-gray-800">
-            
-            {/* Close Icon (X) on the left */}
+            {/* Close */}
             <button
-              onClick={() => setOpen(false)}
-              className="text-3xl p-2 focus:outline-none"
+              onClick={() => setMenuOpen(false)}
+              className="text-3xl"
               aria-label="Close menu"
             >
               ✕
             </button>
 
-            {/* Logo in the center */}
+            {/* Centered Logo */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
-                <img src={logo} alt="Eurofyre LIMITED" className="h-6 w-auto filter" /> 
+              <img src={logo} alt="Eurofyre" className="h-6" />
             </div>
 
-            {/* Search Icon on the right */}
-            <button className="text-2xl p-2 focus:outline-none" aria-label="Search">
+            {/* Search Icon */}
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                setSearchOpen(true);
+              }}
+              className="text-2xl"
+              aria-label="Search"
+            >
               <FaMagnifyingGlass />
             </button>
           </div>
 
-          {/* Menu Links */}
-          <nav className="flex flex-col">
-            <Link to="/about">About Us</Link>
-            <Link to="/system">Systems</Link>
-            <Link to="/news">News</Link>
-            <Link to="/support-service">Support & Services</Link>
-            <Link to="/contact">Contact</Link>
+          {/* Menu Items */}
+          <nav className="flex flex-col mt-4">
+            {[
+              { name: "ABOUT US", to: "/about" },
+              { name: "SYSTEMS", to: "/system" },
+              { name: "NEWS", to: "/news" },
+              { name: "SUPPORT & SERVICES", to: "/support-service" },
+              { name: "CONTACT", to: "/contact" },
+            ].map((item) => (
+              <Link
+                key={item.name}
+                to={item.to}
+                onClick={() => setMenuOpen(false)}
+                className="w-full py-5 px-4 text-white uppercase font-semibold border-b border-gray-800 hover:bg-gray-900 transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
+        </div>
+      )}
+
+      {/* MOBILE SEARCH OVERLAY */}
+      {searchOpen && (
+        <div className="fixed inset-0 z-50 bg-black/70 flex items-start pt-24 px-4">
+          <div className="relative w-full bg-gray-200 rounded-lg">
+            <input
+              autoFocus
+              type="text"
+              placeholder="Search"
+              className="w-full h-14 pl-6 pr-12 rounded-lg text-lg text-gray-800 bg-transparent focus:outline-none"
+            />
+            <button
+              onClick={() => setSearchOpen(false)}
+              className="absolute right-0 top-0 h-full w-12 flex items-center justify-center text-red-500"
+            >
+              ✕
+            </button>
+          </div>
         </div>
       )}
     </header>
