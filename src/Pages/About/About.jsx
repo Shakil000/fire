@@ -3,6 +3,10 @@ import { FiSearch } from "react-icons/fi";
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
 import aboutBg from '../../assets/About/landing-about.jpg';
+import LogoGraphics from './LogoGraphics';
+import Certification from './Certification';
+import PartnerShip from './PartnerShip';
+import Experience from './Experience';
 
 const About = () => {
   return (
@@ -66,9 +70,18 @@ const About = () => {
 
           </div>
         </section>
+        <section>
+            <LogoGraphics></LogoGraphics>
+        </section>
+            {/* Certification section */}
+    <section>
+    <Certification></Certification>
+    {/* <PartnerShip></PartnerShip> */}
+    <Experience></Experience>
+    </section>
       </div>
 
-      {/* Footer */}
+      {/* Footer import here for footer sections */}
       <Footer />
     </>
   );
