@@ -9,13 +9,13 @@ import { LuMessageSquareMore } from "react-icons/lu";
 import { FaFire, FaPeopleGroup } from "react-icons/fa6";
 import { ImFilesEmpty } from "react-icons/im";
 
-export default function Experience() {
+export default function Training() {
   const items = [
     {
-      title: "Diverse Project Portfolio",
+      title: "Large product/system offering",
       logo: <MdOutlineFolderCopy />,
       description:
-        "Eurofyre has been involved in a variety of different projects — from small, single-unit installations to very large detection systems using multiple detection types and specialist fire detection equipment.",
+        "Eurofyre is constantly expanding its product and system offering to ensure it is able to provide a complete detection solution for any application.",
     },
     {
       title: "Liaise Between Specifiers, Consultants & Clients",
@@ -44,20 +44,9 @@ export default function Experience() {
   ];
 
   return (
-    <section className="bg-white text-black px-6 md:px-20 py-6 md:py-6">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold mb-2">
-          How Can We Become Your Partner of Choice?
-        </h2>
-        <div className="mx-auto border-b-4 border-blue-500 w-1/4 mb-10"></div>
-      </div>
-      <p className="mb-10">
-        Eurofyre provides a wide variety of benefits to its partners in the UK
-        and export regions. These include:
-      </p>
-
-      <h2 className="text-3xl font-bold mb-2">Experience</h2>
-      <div className="border-b-4 border-blue-500 w-1/8 mb-6 "></div>
+    <section className="bg-white text-black px-6 md:px-20 py-6 md:py-10">
+      <h2 className="text-3xl font-bold mb-2">Demonstration and Training</h2>
+      <div className="border-b-4 border-blue-500 w-1/4 mb-6 "></div>
 
       <Swiper
         slidesPerView={1}

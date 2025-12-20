@@ -7,6 +7,9 @@ import LogoGraphics from './LogoGraphics';
 import Certification from './Certification';
 import PartnerShip from './PartnerShip';
 import Experience from './Experience';
+import Sales from './Sales';
+import Logistic from './Logistic';
+import Training from './Training';
 
 const About = () => {
   return (
@@ -76,11 +79,12 @@ const About = () => {
             {/* Certification section */}
     <section>
     <Certification></Certification>
-    {/* <PartnerShip></PartnerShip> */}
     <Experience></Experience>
+    <Sales></Sales>
+    <Logistic></Logistic>
+    <Training></Training>
     </section>
       </div>
-
       {/* Footer import here for footer sections */}
       <Footer />
     </>
