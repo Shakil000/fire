@@ -10,6 +10,7 @@ import Experience from './Experience';
 import Sales from './Sales';
 import Logistic from './Logistic';
 import Training from './Training';
+import Contact from '../Home/Contact/Contact';
 
 const About = () => {
   return (
@@ -83,6 +84,7 @@ const About = () => {
     <Sales></Sales>
     <Logistic></Logistic>
     <Training></Training>
+    <Contact></Contact>
     </section>
       </div>
       {/* Footer import here for footer sections */}

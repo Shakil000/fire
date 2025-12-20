@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import contactBg from "../../../assets/ContactBg/services-background.jpg"
 
-const ContactSection = () => {
+const Contact = () => {
   const [enquiry, setEnquiry] = useState("sales");
   const [newsletter, setNewsletter] = useState("no");
 
@@ -125,4 +125,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;
