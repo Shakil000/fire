@@ -5,12 +5,13 @@ import Footer from '../Shared/Footer/Footer';
 import aboutBg from '../../assets/About/landing-about.jpg';
 import LogoGraphics from './LogoGraphics';
 import Certification from './Certification';
-import PartnerShip from './PartnerShip';
 import Experience from './Experience';
 import Sales from './Sales';
 import Logistic from './Logistic';
 import Training from './Training';
 import Contact from '../Home/Contact/Contact';
+import SpecialistSystems from './SpecialistSystems';
+import FeatureList from './FeatureList';
 
 const About = () => {
   return (
@@ -84,6 +85,8 @@ const About = () => {
     <Sales></Sales>
     <Logistic></Logistic>
     <Training></Training>
+    <SpecialistSystems></SpecialistSystems>
+    <FeatureList></FeatureList>
     <Contact></Contact>
     </section>
       </div>

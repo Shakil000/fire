@@ -55,9 +55,12 @@ export default function Experience() {
         Eurofyre provides a wide variety of benefits to its partners in the UK
         and export regions. These include:
       </p>
-
-      <h2 className="text-3xl font-bold mb-2">Experience</h2>
-      <div className="border-b-4 border-blue-500 w-1/8 mb-6 "></div>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-2">Experience</h2>
+        <div className="mx-auto border-b-4 border-blue-500 w-1/6 mb-10"></div>
+      </div>
+      {/* <h2 className="text-3xl font-bold mb-2">Experience</h2>
+      <div className="border-b-4 border-blue-500 w-1/8 mb-6 "></div> */}
 
       <Swiper
         slidesPerView={1}
@@ -68,7 +71,6 @@ export default function Experience() {
           delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true, // mouse রাখলে autoplay থেমে যাবে
-
         }}
         breakpoints={{
           640: { slidesPerView: 1 },
