@@ -4,6 +4,8 @@ import Footer from "../Shared/Footer/Footer";
 import systemBg from "../../assets/SystemBg/System-Page-Featured-Image-V3.jpg";
 import { FiSearch } from "react-icons/fi";
 import Systems from "./Systems";
+import Subscribe from "../Shared/Subscribe";
+import Contact from "../Home/Contact/Contact";
 
 const System = () => {
   return (
@@ -58,6 +60,8 @@ const System = () => {
         </p>
         </section>
         <Systems></Systems>
+        <Subscribe></Subscribe>
+        <Contact></Contact>
         <Footer></Footer>
       </div>
     </>
