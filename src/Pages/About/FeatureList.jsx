@@ -30,7 +30,7 @@ export default function FeatureList() {
       {leftColumn.map((item, idx) => (
         <div key={idx}>
           <div className="flex items-center justify-between">
-            <span className="text-black text-lg font-semibold">{item}</span>
+            <span className="text-teal-500 text-lg font-semibold">{item}</span>
             <CheckCircleIcon className="h-16 w-16 text-teal-600" />
           </div>
           <div className="border-b-4 border-teal-500 w-full mt-4"></div>
@@ -43,7 +43,7 @@ export default function FeatureList() {
       {rightColumn.map((item, idx) => (
         <div key={idx}>
           <div className="flex items-center justify-between">
-            <span className="text-black text-lg font-semibold">{item}</span>
+            <span className="text-teal-500 text-lg font-semibold">{item}</span>
             <CheckCircleIcon className="h-16 w-16 text-teal-600" />
           </div>
           <div className="border-b-4 border-teal-500 w-full mt-4"></div>
