@@ -1,7 +1,7 @@
 // ProductCard.jsx
 import React from 'react';
 
-const ProductCard = ({ title, imageUrl, linkUrl }) => {
+const SystemCard = ({ title, imageUrl, linkUrl }) => {
   return (
     <div className="flex flex-col border shadow-md rounded-lg overflow-hidden bg-white group">
       
@@ -27,4 +27,4 @@ const ProductCard = ({ title, imageUrl, linkUrl }) => {
   );
 };
 
-export default ProductCard;
+export default SystemCard;

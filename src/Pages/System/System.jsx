@@ -1,31 +1,22 @@
 import React from "react";
-import { FiSearch } from "react-icons/fi";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Shared/Footer/Footer";
-import aboutBg from "../../assets/About/landing-about.jpg";
-import LogoGraphics from "./LogoGraphics";
-import Certification from "./Certification";
-import Experience from "./Experience";
-import Sales from "./Sales";
-import Logistic from "./Logistic";
-import Training from "./Training";
-import Contact from "../Home/Contact/Contact";
-import SpecialistSystems from "./SpecialistSystems";
-import FeatureList from "./FeatureList";
+import systemBg from "../../assets/SystemBg/System-Page-Featured-Image-V3.jpg";
+import { FiSearch } from "react-icons/fi";
+import Systems from "./Systems";
 
-const About = () => {
+const System = () => {
   return (
     <>
       {/* Fixed Navbar */}
       <div className="bg-teal-500 fixed top-0 w-full h-20 md:h-20 z-30">
         <Navbar />
       </div>
-
       {/* Hero Section Wrapper */}
       <div className="mt-16 md:mt-20">
         <section
           className="relative h-105 md:h-130 w-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${aboutBg})` }}
+          style={{ backgroundImage: `url(${systemBg})` }}
         >
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>
@@ -35,24 +26,8 @@ const About = () => {
             {/* Center Content */}
             <div className="text-center mt-36 md:mt-40">
               <h1 className="text-white text-3xl md:text-5xl font-bold">
-                About Us
+                Systems
               </h1>
-
-              {/* Tabs */}
-              {/* <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-white text-xs md:text-sm font-semibold uppercase mt-6 md:mt-8">
-                <button className="border-b-2 border-white pb-1">
-                  Overview
-                </button>
-                <button className="opacity-80 hover:opacity-100">
-                  Applications
-                </button>
-                <button className="opacity-80 hover:opacity-100">
-                  Range
-                </button>
-                <button className="opacity-80 hover:opacity-100">
-                  Systems
-                </button>
-              </div> */}
             </div>
             {/* Border */}
             <div className="border border-teal-500"></div>
@@ -71,25 +46,22 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section>
-          <LogoGraphics></LogoGraphics>
-        </section>
-        {/* Certification section */}
-        <section>
-          <Certification></Certification>
-          <Experience></Experience>
-          <Sales></Sales>
-          <Logistic></Logistic>
-          <Training></Training>
-          <SpecialistSystems></SpecialistSystems>
-          <FeatureList></FeatureList>
-          <Contact></Contact>
-        </section>
+        <section className="bg-white text-black px-6 md:px-20 py-6 md:py-6">
+            <div className="text-center">
+        <h2 className="text-3xl font-bold mb-2">
+          Overview
+        </h2>
+        <div className="mx-auto border-b-4 border-blue-500 w-1/10 mb-10"></div>
       </div>
-      {/* Footer import here for footer sections */}
-      <Footer />
+      <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
+          Eurofyre manufacture and supply a range of fire, smoke, heat and gas detection systems to suit a wide variety of commercial and industrial applications. We strive to provide the highest quality products and offer an exceptional level of support. We regularly supply leading fire detection equipment to countries all over the world, including those in the middle east, Asia, and America.
+        </p>
+        </section>
+        <Systems></Systems>
+        <Footer></Footer>
+      </div>
     </>
   );
 };
 
-export default About;
+export default System;

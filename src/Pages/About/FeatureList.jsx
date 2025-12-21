@@ -1,6 +1,5 @@
 import React from "react";
 import { CheckCircleIcon } from "lucide-react";
-import bg from '../../assets/ContactBg/services-background.jpg'
 
 
 const leftColumn = [

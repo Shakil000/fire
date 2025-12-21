@@ -82,7 +82,7 @@ export default function Experience() {
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-gray-50 rounded-lg shadow-2xl shadow-blue-300 p-6 flex flex-col items-center text-center hover:shadow-lg transition duration-300 h-[300px]">
+            <div className="bg-gray-50 rounded-lg shadow-2xl shadow-blue-300 p-6 flex flex-col items-center text-center hover:shadow-lg transition duration-300 h-75">
               <div className="text-blue-600 text-5xl mb-4">{item.logo}</div>
               <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
               <p className="text-base leading-relaxed">{item.description}</p>
