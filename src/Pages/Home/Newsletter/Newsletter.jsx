@@ -4,6 +4,7 @@ import newsLetterBg from "../../../assets/Newsletter/newsletter-background.jpg";
 import articleBg from "../../../assets/Newsletter/ASD-for-Data-Centres-Media-Image-960x400.webp";
 import articleBg2 from "../../../assets/Newsletter/Eurofyre-Christmas-Media-Image-960x400.webp";
 import articleBg3 from "../../../assets/Newsletter/FyreLine-EN54-Fixed-For-Transformers-Hero-Shot-960x400.webp";
+import { toast } from "react-toastify";
 
 const slides = [
   {
@@ -29,6 +30,32 @@ const slides = [
 
 const Newsletter = () => {
   const [current, setCurrent] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  // Email validation regex
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email) {
+      toast.error("Please fill in all required fields!");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email address!");
+      return;
+    }
+
+    toast.success("Successfully subscribed to our newsletter!");
+    setName("");
+    setEmail("");
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -94,31 +121,35 @@ const Newsletter = () => {
              in the image, you would need to use a background image for the pattern. */}
           <div
             className="flex flex-col items-center justify-center h-[400px] md:h-[500px] 
-             rounded-lg overflow-hidden shadow-lg text-white 
-             bg-cover bg-center bg-no-repeat relative"
+       rounded-lg overflow-hidden shadow-lg text-white 
+       bg-cover bg-center bg-no-repeat relative"
             style={{ backgroundImage: `url(${newsLetterBg})` }}
           >
-            {/* Optional dark overlay */}
+            {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/60"></div>
 
             {/* Content */}
             <div className="relative z-10 text-center">
               <h3
                 className="text-2xl md:text-3xl font-semibold uppercase tracking-wider 
-                   border-b-4 border-blue-500 inline-block pb-2"
+             border-b-4 border-blue-500 inline-block pb-2"
               >
                 Newsletter Subscription
               </h3>
 
-              <form className="mt-8 w-full max-w-sm px-4">
+              <form
+                onSubmit={handleSubmit}
+                className="mt-8 w-full max-w-sm px-4"
+              >
                 {/* Name */}
                 <div className="relative mb-4">
                   <input
                     type="text"
                     placeholder="*Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full py-3 pl-12 pr-4 bg-white text-gray-800 rounded-md 
-                     focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    required
+               focus:outline-none focus:ring-2 focus:ring-teal-500"  
                   />
                   <FaUser className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400" />
                 </div>
@@ -128,9 +159,10 @@ const Newsletter = () => {
                   <input
                     type="email"
                     placeholder="*Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full py-3 pl-12 pr-4 bg-white text-gray-800 rounded-md 
-                     focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    required
+               focus:outline-none focus:ring-2 focus:ring-teal-500"
                   />
                   <FaEnvelope className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400" />
                 </div>
@@ -139,8 +171,8 @@ const Newsletter = () => {
                 <button
                   type="submit"
                   className="w-full px-8 py-3 bg-teal-600 text-white font-semibold 
-                   uppercase tracking-wider rounded-md 
-                   hover:bg-teal-700 transition"
+             uppercase tracking-wider rounded-md 
+             hover:bg-teal-700 transition"
                 >
                   Send
                 </button>

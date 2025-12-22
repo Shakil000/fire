@@ -5,7 +5,6 @@ import Footer from "../Shared/Footer/Footer";
 import aboutBg from "../../assets/ContactBg/landing-contact.jpg";
 import Subscribe from "../Shared/Subscribe";
 import Contact from "../Home/Contact/Contact";
-import { MdEmail, MdPhone } from "react-icons/md";
 import ContactsCard from "./ContactsCard";
 import { Helmet } from "react-helmet-async";
 
