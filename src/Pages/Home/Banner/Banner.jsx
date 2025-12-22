@@ -3,6 +3,7 @@ import banner1 from "../../../assets/FyreLine-EN54-Fixed-Alarm-Condition.jpg";
 import banner2 from "../../../assets/Li-ion-Tamer-Gen-3-Monitoring-Sensor-Close-up-Media-Image.jpg";
 import banner3 from "../../../assets/Wireless-Fire-Detection-Page-Featured-Image-V3.jpg";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import Search from "../../Shared/Search/Search";
 
 const bannerData = [
   {
@@ -31,7 +32,6 @@ const SLIDE_DURATION = 5000;
 
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [animateLine, setAnimateLine] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,48 +40,10 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSearchFocus = () => {
-    setAnimateLine(false);
-    setTimeout(() => setAnimateLine(true), 10);
-  };
-
   return (
     <section className="relative min-h-screen overflow-hidden bg-black text-white">
 
-      {/* 🔍 FIXED SEARCH (DESKTOP ONLY) */}
-      <div className="hidden md:flex justify-center absolute top-28 left-0 right-0 z-30">
-        <div className="relative w-full max-w-xl bg-gray-200 rounded-lg overflow-hidden">
-          {animateLine && (
-            <span
-              className="absolute bottom-0 left-0 h-[2px] w-full bg-red-600"
-              style={{
-                transform: "translateX(-100%)",
-                animation: "flowOnce 2.3s ease-in-out forwards",
-              }}
-            />
-          )}
-
-          <input
-            type="text"
-            placeholder="Search"
-            onFocus={handleSearchFocus}
-            className="w-full h-14 pl-6 pr-12 text-lg text-gray-800 bg-transparent focus:outline-none"
-          />
-
-          <button className="absolute right-0 top-0 h-full w-12 flex items-center justify-center text-gray-500 hover:text-red-600">
-            <FaMagnifyingGlass />
-          </button>
-
-          <style>
-            {`
-              @keyframes flowOnce {
-                from { transform: translateX(-100%); }
-                to { transform: translateX(100%); }
-              }
-            `}
-          </style>
-        </div>
-      </div>
+      <Search></Search>
 
       {/* 🔄 SLIDING BANNERS ONLY */}
       <div
