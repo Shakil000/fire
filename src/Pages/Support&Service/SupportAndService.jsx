@@ -38,7 +38,7 @@ const SupportAndService = () => {
               <div className="relative w-full max-w-xl md:max-w-3xl">
                 <input
                   type="text"
-                  placeholder="Search Eurofyre... Or Call +44 (0)1329 835024"
+                  placeholder="Search Revere... Or Call +44 (0)1329 835024"
                   className="w-full h-12 md:h-14 rounded-md pl-4 md:pl-5 pr-12 md:pr-14 text-sm md:text-base text-gray-700 focus:outline-none bg-white"
                 />
                 <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 md:p-3 rounded-md text-[#0077a2] hover:bg-gray-100">
@@ -56,7 +56,7 @@ const SupportAndService = () => {
         <div className="mx-auto border-b-4 border-blue-500 w-1/10 mb-10"></div>
       </div>
       <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
-          Eurofyre manufacture and supply a range of fire, smoke, heat and gas detection systems to suit a wide variety of commercial and industrial applications. We strive to provide the highest quality products and offer an exceptional level of support. We regularly supply leading fire detection equipment to countries all over the world, including those in the middle east, Asia, and America.
+          Revere manufacture and supply a range of fire, smoke, heat and gas detection systems to suit a wide variety of commercial and industrial applications. We strive to provide the highest quality products and offer an exceptional level of support. We regularly supply leading fire detection equipment to countries all over the world, including those in the middle east, Asia, and America.
         </p>
         </section>
         <SupportAndServices></SupportAndServices>

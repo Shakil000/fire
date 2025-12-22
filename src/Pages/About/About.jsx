@@ -61,7 +61,7 @@ const About = () => {
               <div className="relative w-full max-w-xl md:max-w-3xl">
                 <input
                   type="text"
-                  placeholder="Search Eurofyre... Or Call +44 (0)1329 835024"
+                  placeholder="Search Revere... Or Call +44 (0)1329 835024"
                   className="w-full h-12 md:h-14 rounded-md pl-4 md:pl-5 pr-12 md:pr-14 text-sm md:text-base text-gray-700 focus:outline-none bg-white"
                 />
                 <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 md:p-3 rounded-md text-[#0077a2] hover:bg-gray-100">

@@ -8,8 +8,8 @@ export default function LogoGraphics() {
       {/* Intro Section */}
       <section className="bg-white text-black font-semibold px-6 md:px-20 py-12 md:py-24">
         <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
-          Based in the south of the UK, Eurofyre Ltd is a privately owned
-          company established in 2007. Eurofyre is a global provider of
+          Based in the south of the UK, Revere Ltd is a privately owned
+          company established in 2007. Revere is a global provider of
           specialist fire detection and associated safety products for
           commercial and industrial applications.
         </p>
@@ -17,7 +17,7 @@ export default function LogoGraphics() {
         <div className="flex justify-center items-center mt-6">
           <img
             src={logo}
-            alt="Eurofyre Logo"
+            alt="Revere Logo"
             className="w-48 md:w-80 h-auto rounded-lg"
           />
         </div>
@@ -42,7 +42,7 @@ export default function LogoGraphics() {
               Our Purpose
             </h2>
             <p className="text-base md:text-lg leading-relaxed">
-              Eurofyre’s key objective is to manufacture, supply and promote fire detection
+              Revere’s key objective is to manufacture, supply and promote fire detection
               solutions that are designed to give users time to respond to possible threats
               before the loss of critical infrastructure, high-value assets, business and,
               most crucially, life.
@@ -55,7 +55,7 @@ export default function LogoGraphics() {
               Our Vision
             </h2>
             <p className="text-base md:text-lg leading-relaxed">
-              Eurofyre works closely with representatives all over the world to enhance the
+              Revere works closely with representatives all over the world to enhance the
               service they provide to their customers. We do this by providing concise online
               literature, specific training programs and exceptional pre and post-sale technical
               support.
@@ -68,9 +68,10 @@ export default function LogoGraphics() {
 
           {/* Accreditation */}
           <div>
-            <h2 className="text-xl md:text-3xl font-bold border-b-4 border-blue-500 inline-block">
-              Accreditation
-            </h2>
+            <div className="text-center">
+        <h2 className="text-3xl font-bold mb-2">Accreditation</h2>
+        <div className="mx-auto border-b-4 border-blue-500 w-1/6 mb-10"></div>
+      </div>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ export default function SpecialistSystems() {
       </div>
       <div>
         <img src={specialSystem} alt="" />
-        <p className="bg-white text-black font-semibold px-6 md:px-20 py-12 md:py-12">Eurofyre supplies and supports detection solutions to suit every application. From more traditional detection systems that use point type detectors, to more specialist detection solutions such as linear heat detection, aspirating smoke detection or beam detection. Whatever solution you require, Eurofyre will deliver the same expert service, both pre and post–sale, to ensure you get all the support you need.</p>
+        <p className="bg-white text-black font-semibold px-6 md:px-20 py-12 md:py-12">Revere supplies and supports detection solutions to suit every application. From more traditional detection systems that use point type detectors, to more specialist detection solutions such as linear heat detection, aspirating smoke detection or beam detection. Whatever solution you require, Revere will deliver the same expert service, both pre and post–sale, to ensure you get all the support you need.</p>
       </div>
     </section>
   );

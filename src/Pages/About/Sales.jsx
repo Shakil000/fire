@@ -15,13 +15,13 @@ export default function Sales() {
       title: "Large product/system offering",
       logo: <MdOutlineFolderCopy />,
       description:
-        "Eurofyre is constantly expanding its product and system offering to ensure it is able to provide a complete detection solution for any application.",
+        "Revere is constantly expanding its product and system offering to ensure it is able to provide a complete detection solution for any application.",
     },
     {
       title: "Liaise Between Specifiers, Consultants & Clients",
       logo: <LuMessageSquareMore />,
       description:
-        "Eurofyre bridges the gap between specifiers, consultants and clients, providing all the necessary information and tools to help meet strict specifications and regulations across the world.",
+        "Revere bridges the gap between specifiers, consultants and clients, providing all the necessary information and tools to help meet strict specifications and regulations across the world.",
     },
     {
       title: "Success based on a customer-focused strategy",
@@ -39,14 +39,16 @@ export default function Sales() {
       title: "Thorough knowledge of the fire industry and regulatory standards",
       logo: <FaFire />,
       description:
-        "Eurofyre’s thorough knowledge of the fire industry and regulatory standards around the world means we are able to advise and assist with every application.",
+        "Revere’s thorough knowledge of the fire industry and regulatory standards around the world means we are able to advise and assist with every application.",
     },
   ];
 
   return (
     <section className="bg-white text-black px-6 md:px-20 py-6 md:py-10">
-      <h2 className="text-3xl font-bold mb-2">Sales and Technical Support</h2>
-      <div className="border-b-4 border-blue-500 w-1/4 mb-6 "></div>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-2">Sales and Technical Support</h2>
+        <div className="mx-auto border-b-4 border-blue-500 w-1/3 mb-10"></div>
+      </div>
 
       <Swiper
         slidesPerView={1}

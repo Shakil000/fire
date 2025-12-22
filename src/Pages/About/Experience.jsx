@@ -15,13 +15,13 @@ export default function Experience() {
       title: "Diverse Project Portfolio",
       logo: <MdOutlineFolderCopy />,
       description:
-        "Eurofyre has been involved in a variety of different projects — from small, single-unit installations to very large detection systems using multiple detection types and specialist fire detection equipment.",
+        "Revere has been involved in a variety of different projects — from small, single-unit installations to very large detection systems using multiple detection types and specialist fire detection equipment.",
     },
     {
       title: "Liaise Between Specifiers, Consultants & Clients",
       logo: <LuMessageSquareMore />,
       description:
-        "Eurofyre bridges the gap between specifiers, consultants and clients, providing all the necessary information and tools to help meet strict specifications and regulations across the world.",
+        "Revere bridges the gap between specifiers, consultants and clients, providing all the necessary information and tools to help meet strict specifications and regulations across the world.",
     },
     {
       title: "Success based on a customer-focused strategy",
@@ -39,7 +39,7 @@ export default function Experience() {
       title: "Thorough knowledge of the fire industry and regulatory standards",
       logo: <FaFire />,
       description:
-        "Eurofyre’s thorough knowledge of the fire industry and regulatory standards around the world means we are able to advise and assist with every application.",
+        "Revere’s thorough knowledge of the fire industry and regulatory standards around the world means we are able to advise and assist with every application.",
     },
   ];
 
@@ -52,7 +52,7 @@ export default function Experience() {
         <div className="mx-auto border-b-4 border-blue-500 w-1/4 mb-10"></div>
       </div>
       <p className="mb-10">
-        Eurofyre provides a wide variety of benefits to its partners in the UK
+        Revere provides a wide variety of benefits to its partners in the UK
         and export regions. These include:
       </p>
       <div className="text-center">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/eurofyre-logo-1.png";
+import logo from "../../../../src/assets/Nav Logo/main_full.png";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const Navbar = () => {
@@ -22,10 +22,12 @@ const Navbar = () => {
           </button>
 
           {/* Logo */}
-          <div className="absolute w-full flex justify-center lg:relative lg:w-auto">
+          <div className="absolute w-full flex items-center justify-center lg:relative lg:w-auto">
             <Link to="/">
-              <img src={logo} alt="Eurofyre" className="h-6" />
+              <img src={logo} alt="RevereRevere Technologies Solution" className="lg:h-16 h-12" />
             </Link>
+              <p className="md:text-xl text-[#08baeb]">
+            <strong className="text-[#F66704]">Revere</strong> Technologies Solution</p>
           </div>
 
           {/* Mobile Search Icon */}
@@ -42,7 +44,7 @@ const Navbar = () => {
             <Link to="/about">About Us</Link>
             <Link to="/system">Systems</Link>
             <Link to="/news">News</Link>
-            <Link to="/support-service">Support</Link>
+            <Link to="/support-service">SUPPORT & SERVICES</Link>
             <Link to="/contact">Contact</Link>
           </nav>
         </div>
@@ -64,7 +66,7 @@ const Navbar = () => {
 
             {/* Centered Logo */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
-              <img src={logo} alt="Eurofyre" className="h-6" />
+              <img src={logo} alt="Revere" className="h-6" />
             </div>
 
             {/* Search Icon */}

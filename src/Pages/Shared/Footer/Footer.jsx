@@ -30,7 +30,7 @@ const Footer = () => {
           <a className="hover:text-white">Shipping</a>
           <a className="hover:text-white">Secure Online Ordering</a>
           <span className="text-gray-400 mt-2 sm:mt-0 sm:ml-4">
-            Eurofyre Ltd © All Rights Reserved
+            Revere Ltd © All Rights Reserved
           </span>
         </div>
       </div>
