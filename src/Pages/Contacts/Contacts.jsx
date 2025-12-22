@@ -16,7 +16,7 @@ const About = () => {
         <title>Contacts || Revere</title>
       </Helmet> */}
       {/* Fixed Navbar */}
-      <div className="">
+      <div className="bg-teal-500 fixed top-0 w-full h-20 md:h-20 z-30">
         <Navbar />
       </div>
 
