@@ -5,6 +5,8 @@ import MainLayout from "../layouts/MainLayout";
 import About from "../Pages/About/About";
 import System from "../Pages/System/System";
 import SupportAndService from "../Pages/Support&Service/SupportAndService";
+import Contacts from "../Pages/Contacts/Contacts";
+import News from "../Pages/News/News";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/news",
-    element: <h1>News Page</h1>,
+    element: <News></News>,
   },
   {
     path: "/support-service",
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/contact",
-    element: <h1>Contact Page</h1>,
+    element: <Contacts></Contacts>,
   },
 ]);
 

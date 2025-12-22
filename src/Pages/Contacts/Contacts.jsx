@@ -2,26 +2,21 @@ import React from "react";
 import { FiSearch } from "react-icons/fi";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "../Shared/Footer/Footer";
-import aboutBg from "../../assets/About/landing-about.jpg";
-import LogoGraphics from "./LogoGraphics";
-import Certification from "./Certification";
-import Experience from "./Experience";
-import Sales from "./Sales";
-import Logistic from "./Logistic";
-import Training from "./Training";
+import aboutBg from "../../assets/ContactBg/landing-contact.jpg";
+import Subscribe from "../Shared/Subscribe";
 import Contact from "../Home/Contact/Contact";
-import SpecialistSystems from "./SpecialistSystems";
-import FeatureList from "./FeatureList";
+import { MdEmail, MdPhone } from "react-icons/md";
+import ContactsCard from "./ContactsCard";
 import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <>
       {/* <Helmet>
-        <title>About Us || Revere</title>
+        <title>Contacts || Revere</title>
       </Helmet> */}
       {/* Fixed Navbar */}
-      <div className="bg-teal-500 fixed top-0 w-full h-20 md:h-20 z-30">
+      <div className="">
         <Navbar />
       </div>
 
@@ -41,22 +36,6 @@ const About = () => {
               <h1 className="text-white text-3xl md:text-5xl font-bold">
                 About Us
               </h1>
-
-              {/* Tabs */}
-              {/* <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-white text-xs md:text-sm font-semibold uppercase mt-6 md:mt-8">
-                <button className="border-b-2 border-white pb-1">
-                  Overview
-                </button>
-                <button className="opacity-80 hover:opacity-100">
-                  Applications
-                </button>
-                <button className="opacity-80 hover:opacity-100">
-                  Range
-                </button>
-                <button className="opacity-80 hover:opacity-100">
-                  Systems
-                </button>
-              </div> */}
             </div>
             {/* Border */}
             <div className="border border-teal-500"></div>
@@ -76,20 +55,11 @@ const About = () => {
           </div>
         </section>
         <section>
-          <LogoGraphics></LogoGraphics>
-        </section>
-        {/* Certification section */}
-        <section>
-          <Certification></Certification>
-          <Experience></Experience>
-          <Sales></Sales>
-          <Logistic></Logistic>
-          <Training></Training>
-          <SpecialistSystems></SpecialistSystems>
-          <FeatureList></FeatureList>
-          <Contact></Contact>
+          <ContactsCard></ContactsCard>
         </section>
       </div>
+      <Subscribe></Subscribe>
+      <Contact></Contact>
       {/* Footer import here for footer sections */}
       <Footer />
     </>

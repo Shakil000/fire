@@ -133,7 +133,7 @@ const SupportAndServices = () => {
         <h2 className="text-4xl text-black font-bold mb-2">
           Support & Services
         </h2>
-        <div className="mx-auto border-b-4 border-blue-500 w-1/8 mb-10"></div>
+        <div className="mx-auto border-b-4 border-blue-500 w-1/4 mb-10"></div>
       </div>
 
         {/* Product Grid Layout */}

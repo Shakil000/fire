@@ -6,10 +6,14 @@ import { FiSearch } from "react-icons/fi";
 import Systems from "./Systems";
 import Subscribe from "../Shared/Subscribe";
 import Contact from "../Home/Contact/Contact";
+import { Helmet } from "react-helmet-async";
 
 const System = () => {
   return (
     <>
+      {/* <Helmet>
+        <title>System || Revere</title>
+      </Helmet> */}
       {/* Fixed Navbar */}
       <div className="bg-teal-500 fixed top-0 w-full h-20 md:h-20 z-30">
         <Navbar />
@@ -49,15 +53,18 @@ const System = () => {
           </div>
         </section>
         <section className="bg-white text-black px-6 md:px-20 py-6 md:py-6">
-            <div className="text-center">
-        <h2 className="text-3xl font-bold mb-2">
-          Overview
-        </h2>
-        <div className="mx-auto border-b-4 border-blue-500 w-1/10 mb-10"></div>
-      </div>
-      <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
-          Revere manufacture and supply a range of fire, smoke, heat and gas detection systems to suit a wide variety of commercial and industrial applications. We strive to provide the highest quality products and offer an exceptional level of support. We regularly supply leading fire detection equipment to countries all over the world, including those in the middle east, Asia, and America.
-        </p>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-2">Overview</h2>
+            <div className="mx-auto border-b-4 border-blue-500 w-1/10 mb-10"></div>
+          </div>
+          <p className="text-base md:text-lg leading-relaxed text-center md:text-left">
+            Revere manufacture and supply a range of fire, smoke, heat and gas
+            detection systems to suit a wide variety of commercial and
+            industrial applications. We strive to provide the highest quality
+            products and offer an exceptional level of support. We regularly
+            supply leading fire detection equipment to countries all over the
+            world, including those in the middle east, Asia, and America.
+          </p>
         </section>
         <Systems></Systems>
         <Subscribe></Subscribe>
